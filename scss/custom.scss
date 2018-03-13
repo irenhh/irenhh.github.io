@@ -1,0 +1,176 @@
+$font-base: 16;
+$color-headings: #010101;
+$color-pad1: #313841;
+$color-pad2: #898989;
+$color-footer-h: #fcdb00;
+$color-cover-p: #555;
+$color-footer-li: #fff;
+@function rem($pixels, $context:$font-base) {
+	@return #{$pixels/$context}rem
+}
+@mixin font-style ($font-weight, $font-size, $line-height, $color, $font-family: ('PT Sans', sans-serif)) {
+	font-weight: $font-weight;
+	font-size: rem($font-size);
+	line-height: $line-height/$font-size;
+	color: $color;
+	font-family: $font-family;
+}
+.header {
+	background-color: #fcdb00;
+}
+.nav-list-style a {
+	@include font-style (700, 22, 20, $color-headings)
+}
+.my-navbar {
+	padding: 3.75rem 0 3.75rem 1rem;
+	& li.my-nav-item a {
+		padding: .5rem 3.8rem;
+	}
+}
+.header-row2 {
+	padding-bottom: 6.8rem;
+}
+.header-intro-heading {
+	@include font-style (700, 32, 32, $color-headings)
+}
+.header-intro-p1 {
+	@include font-style (400, 20, 21, $color-pad1)
+}
+.header-intro-p2 {
+	@include font-style (400, 16, 20, $color-cover-p)
+}
+.main-header {
+	@include font-style (700, 32, 32, $color-headings)
+}
+.main-subheader {
+	@include font-style (400, 20, 24, $color-pad1)
+}
+.feature-h {
+	@include font-style (400, 22, 24, $color-headings)
+}
+.feature-p {
+	@include font-style (400, 16, 20, $color-pad2)
+}
+.font-awesome-feature {
+	@include font-style (unset, 50, 52.47, $color-headings)
+}
+.feature-row1 {
+	margin-top: 5.4rem;
+}
+.feature-row2 {
+	margin-top: 5.4rem;
+	margin-bottom: 10.4rem;
+}
+.footer {
+	background-color: #010101;
+	padding-bottom: 9.1rem;
+}
+.form-submit {
+	margin-top: 2.7rem;
+	margin-bottom: 5rem;
+	& input {
+		width: 36.3rem !important;
+		height: 3.1rem;
+	}
+	& button {
+		width: 7.8rem !important;
+		margin-left: 1.3rem;
+		margin-right: .5rem;
+		height: 3.1rem;
+		background-color: $color-footer-h;
+	}
+}
+.footer-h {
+	@include font-style (700, 32, 32, $color-footer-h)
+}
+.footer-p {
+	@include font-style (400, 20, 24, $color-pad2)
+}
+.li-social a, .li-social {
+	width: 36px;
+	height: 36px;
+	background-image: url(../img/sprite-social.png);
+	margin: 0 1.2rem;
+}
+.li-social.fb {
+	background-position: -10px 0;
+}
+.li-social.twitter {
+	background-position: -79px 0;
+}
+.li-social.googleplus {
+	background-position: -146px 0;
+}
+.li-social.pinterest {
+	background-position: -214px 0;
+}
+.footer-info {
+	@include font-style (400, 16, 20, $color-footer-li)
+}
+.footer-info-row {
+	margin-top: 7.1rem;
+}
+.nav-icon-font {
+	color: $color-headings;
+}
+@media screen and (min-width: 1200px) {
+	.my-container {
+		max-width: 960px;
+	}
+}
+@media screen and (min-width: 576px) {
+
+}
+@media screen and (max-width: 991px) {
+	.feature-row2 {
+		margin-top: 0;
+	}
+	.form-submit input {
+		width: 27.3rem !important;
+	}
+}
+@media screen and (max-width: 850px) {
+	.header-row2 {
+		& img {
+			width: 100%;
+		}
+	}
+	.my-navbar li.my-nav-item a {
+		padding: .5rem 1.8rem;
+	}
+}
+@media screen and (max-width: 767px) {
+	.my-navbar li.my-nav-item a {
+		padding: .5rem 0.8rem;
+	}
+	.form-submit {
+		& input {
+			margin: 0 auto;
+		}
+		& button {
+			margin: 0 auto;
+			margin-top: 1rem;
+		}
+	}
+}
+@media screen and (max-width: 575px) {
+	.header-row2 {
+		text-align: center;
+	}
+	.hide {
+		display: none;
+	}
+	.nav-list-style {
+		display: none;
+	}
+}
+@media screen and (max-width: 470px) {
+	.form-submit input {
+		width: 20.3rem !important;
+	}
+}
+@media screen and (max-width: 360px) {
+	.form-submit input {
+		width: 16.3rem !important;
+	}
+}
