@@ -106,6 +106,9 @@ $color-footer-li: #fff;
 }
 .footer-info {
 	@include font-style (400, 16, 20, $color-footer-li)
+	& a {
+		color: inherit;
+	}
 }
 .footer-info-row {
 	margin-top: 7.1rem;
