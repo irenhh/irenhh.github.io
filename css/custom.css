@@ -165,6 +165,10 @@
   font-family: "PT Sans", sans-serif;
 }
 
+.footer-info a {
+  color: inherit;
+}
+
 .footer-info-row {
   margin-top: 7.1rem;
 }
