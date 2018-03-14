@@ -180,11 +180,11 @@
 }
 
 @media screen and (max-width: 991px) {
-  .feature-row2 {
-    margin-top: 0;
-  }
   .form-submit input {
     width: 27.3rem !important;
+  }
+  .margin-md {
+    margin-top: 5.4rem;
   }
 }
 
@@ -207,6 +207,12 @@
   .form-submit button {
     margin: 0 auto;
     margin-top: 1rem;
+  }
+  .feature-row2 {
+    margin-top: 0;
+  }
+  .margin-md {
+    margin-top: 0;
   }
 }
 
